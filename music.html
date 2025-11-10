@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我喜歡的歌曲</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/727/727245.png" type="image/png">
+  <style>
+    /* 基本樣式設定 */
+    body {
+      margin: 0;
+      font-family: "Microsoft JhengHei", sans-serif;
+      background-color: #fffaf3;
+      color: #333;
+    }
+
+    /* 頁首區塊 */
+    #header {
+      background-image: linear-gradient(120deg, #e66465, #9198e5);
+      padding: 2em 1em;
+      color: white;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #header h1 {
+      margin: 0;
+      font-size: 2em;
+      letter-spacing: 2px;
+    }
+
+    /* 主要內容區 */
+    #article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2em 1em;
+    }
+
+    .song-card {
+      background: white;
+      width: 90%;
+      max-width: 600px;
+      margin: 1em 0;
+      padding: 1.5em;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .song-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .song-title {
+      color: #444;
+      font-size: 1.4em;
+      margin-bottom: 0.5em;
+    }
+
+    .song-link a {
+      color: #e66465;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s ease;
+    }
+
+    .song-link a:hover {
+      color: #9198e5;
+      text-decoration: underline;
+    }
+
+    /* 頁尾區塊 */
+    #footer {
+      background-color: #f9c81e;
+      text-align: center;
+      padding: 1em;
+      color: #333;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    /* 響應式設計 */
+    @media (max-width: 600px) {
+      .song-card {
+        width: 95%;
+        padding: 1.2em;
+      }
+      .song-title {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>🎵 我喜歡的歌曲 🎶</h1>
+  </div>
+
+  <div id="article">
+    <div class="song-card">
+      <div class="song-title">1. 牽絲戲</div>
+      <div class="song-link">
+        <a href="https://www.youtube.com/watch?v=sKwOQKGJ6KQ" target="_blank">前往 YouTube</a>
+      </div>
+    </div>
+
+    <div class="song-card">
+      <div class="song-title">2. 辭·九門回憶</div>
+      <div class="song-link">
+        <a href="https://www.youtube.com/watch?v=uEzMuh7cKf0" target="_blank">前往 YouTube</a>
+      </div>
+    </div>
+
+    <div class="song-card">
+      <div class="song-title">3. 青花瓷</div>
+      <div class="song-link">
+        <a href="https://www.youtube.com/watch?v=uf8HHCcbpFc" target="_blank">前往 YouTube</a>
+      </div>
+    </div>
+
+    <div class="song-card">
+      <div class="song-title">4. 青衣</div>
+      <div class="song-link">
+        <a href="https://www.youtube.com/watch?v=VWkKLGRZm7U" target="_blank">前往 YouTube</a>
+      </div>
+    </div>
+
+    <div class="song-card">
+      <div class="song-title">5. 把回憶拼好給你</div>
+      <div class="song-link">
+        <a href="https://www.youtube.com/watch?v=8lgxLB-x4OI&list=RD8lgxLB-x4OI&start_radio=1" target="_blank">前往 YouTube</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    先介紹這幾首 🎵 未來有想到其他的再加進來
+  </div>
+</body>
+</html>
