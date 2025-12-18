@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我喜歡的歌曲</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/727/727245.png">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Microsoft JhengHei", sans-serif;
+      background-color: #fffaf3;
+      color: #333;
+    }
+
+    /* Header */
+    #header {
+      background-image: linear-gradient(120deg, #e66465, #9198e5);
+      padding: 2em 1em;
+      color: white;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    /* 主內容 */
+    #article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2em 1em;
+    }
+
+    .song-card, .info-card {
+      background: white;
+      width: 90%;
+      max-width: 600px;
+      margin: 1em 0;
+      padding: 1.5em;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .song-card:hover {
+      transform: translateY(-5px);
+      transition: 0.2s;
+    }
+
+    .song-title {
+      font-size: 1.4em;
+      margin-bottom: 0.5em;
+    }
+
+    .song-link a {
+      color: #e66465;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .song-link a:hover {
+      text-decoration: underline;
+      color: #9198e5;
+    }
+
+    /* 按鈕區 */
+    button {
+      background-color: #4f6df5;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      margin: 6px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #3d58d8;
+      transform: translateY(-2px);
+    }
+
+    #content {
+      margin-bottom: 1em;
+      color: #555;
+      min-height: 40px;
+    }
+
+    /* Footer */
+    #footer {
+      background-color: #f9c81e;
+      text-align: center;
+      padding: 1em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="header">
+    <h1>🎵 我喜歡的歌曲 🎶</h1>
+  </div>
+
+  <div id="article">
+
+    <!-- 歌曲列表 -->
+    <div class="song-card">
+      <div class="song-title">牽絲戲</div>
+      <div class="song-link">
+        <a href="https://www.youtube.com/watch?v=sKwOQKGJ6KQ" target="_blank">前往 YouTube</a>
+      </div>
+    </div>
+
+    <div class="song-card">
+      <div class="song-title">辭·九門回憶</div>
+      <div class="song-link">
+        <a href="https://www.youtube.com/watch?v=uEzMuh7cKf0" target="_blank">前往 YouTube</a>
+      </div>
+    </div>
+
+    <div class="song-card">
+      <div class="song-title">青花瓷</div>
+      <div class="song-link">
+        <a href="https://www.youtube.com/watch?v=uf8HHCcbpFc" target="_blank">前往 YouTube</a>
+      </div>
+    </div>
+
+    <div class="song-card">
+      <div class="song-title">青衣</div>
+      <div class="song-link">
+        <a href="https://www.youtube.com/watch?v=VWkKLGRZm7U" target="_blank">前往 YouTube</a>
+      </div>
+    </div>
+    <div class="song-card">
+      <div class="song-title">游京</div>
+      <div class="song-link">
+        <a href="https://www.youtube.com/watch?v=UEJ0h4StCw8&list=RDUEJ0h4StCw8&start_radio=1" target="_blank">前往 YouTube</a>
+      </div>
+    </div>
+
+    <!-- JS 互動區 -->
+    <div class="info-card">
+      <h2>歌曲介紹</h2>
+      <p id="content">請點擊下方按鈕查看作者</p>
+
+      <button onclick="changeContent(0)">牽絲戲</button>
+      <button onclick="changeContent(1)">辭·九門回憶</button>
+      <button onclick="changeContent(2)">青花瓷</button>
+      <button onclick="changeContent(3)">青衣</button>
+      <button onclick="changeContent(4)">把回憶拼好給你</button>
+      <button onclick="changeContent(5)">遊京</button>
+    </div>
+
+  </div>
+
+  <div id="footer">
+    先介紹這幾首 🎵 未來有想到其他的再加進來
+  </div>
+
+  <script>
+  const songs = [
+    "牽絲戲－銀臨 & Aki阿杰",
+    "辭·九門回憶－等什么君（邓寓君）",
+    "青花瓷－周杰倫",
+    "青衣－琪大媽",
+    "把回憶拼好給你－王贰浪",
+    "游京－藤竹京"
+  ];
+
+  function changeContent(index) {
+    document.getElementById("content").innerHTML = songs[index];
+  }
+</script>
+
+
+    function changeContent(index) {
+      document.getElementById("content").innerHTML = songs[index];
+    }
+  </script>
+
+</body>
+</html>
